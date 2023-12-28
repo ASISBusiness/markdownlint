@@ -1051,11 +1051,25 @@ export interface Configuration {
   /**
    * MD055/table-pipe-style : Table pipe style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
    */
-  MD055?: boolean;
+  MD055?:
+    | boolean
+    | {
+        /**
+         * Table pipe style
+         */
+        style?: "consistent" | "both" | "none" | "leading" | "trailing";
+      };
   /**
    * MD055/table-pipe-style : Table pipe style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
    */
-  "table-pipe-style"?: boolean;
+  "table-pipe-style"?:
+    | boolean
+    | {
+        /**
+         * Table pipe style
+         */
+        style?: "consistent" | "both" | "none" | "leading" | "trailing";
+      };
   /**
    * headings : MD001, MD003, MD018, MD019, MD020, MD021, MD022, MD023, MD024, MD025, MD026, MD036, MD041, MD043
    */

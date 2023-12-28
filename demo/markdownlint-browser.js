@@ -6764,6 +6764,8 @@ module.exports = {
   "description": "Table pipe style",
   "tags": ["table"],
   "function": function MD055(params, onError) {
+    // eslint-disable-next-line no-unused-vars
+    var style = String(params.config.style || "consistent");
     var tables = filterByTypes(params.parsers.micromark.tokens, ["table"]);
     var _iterator = _createForOfIteratorHelper(tables),
       _step;

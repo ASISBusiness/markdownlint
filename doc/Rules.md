@@ -2331,6 +2331,11 @@ Tags: `table`
 
 Aliases: `table-pipe-style`
 
+Parameters:
+
+- `style`: Table pipe style (`string`, default `consistent`, values `both` /
+  `consistent` / `leading` / `none` / `trailing`)
+
 This rule is triggered when a [GitHub Flavored Markdown table][gfm-table] is
 inconsistent about its use of leading and trailing pipe characters (`|`).
 
@@ -2338,7 +2343,7 @@ By default (`consistent` style), the header row of the first table in a document
 is used to determine the style that is enforced for all tables in that document.
 A specific style can be required by setting the `style` parameter accordingly.
 
-This table's header row has leading and trailing pipes, but its delimeter row is
+This table's header row has leading and trailing pipes, but its delimiter row is
 missing the trailing pipe and its first row of cells is missing the leading
 pipe:
 

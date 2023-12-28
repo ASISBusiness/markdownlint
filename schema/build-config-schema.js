@@ -529,6 +529,22 @@ for (const rule of rules) {
         },
       };
       break;
+    case "MD055":
+      scheme.properties = {
+        "style": {
+          "description": "Table pipe style",
+          "type": "string",
+          "enum": [
+            "consistent",
+            "both",
+            "none",
+            "leading",
+            "trailing"
+          ],
+          "default": "consistent"
+        }
+      };
+      break;
     default:
       custom = false;
       break;
