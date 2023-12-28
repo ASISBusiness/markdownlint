@@ -6760,8 +6760,8 @@ var lastOrUndefined = function lastOrUndefined(items) {
   return items[items.length - 1];
 };
 module.exports = {
-  "names": ["MD055", "table-missing-border"],
-  "description": "Table is missing leading or trailing pipe character",
+  "names": ["MD055", "table-pipe-style"],
+  "description": "Table pipe style",
   "tags": ["table"],
   "function": function MD055(params, onError) {
     var tables = filterByTypes(params.parsers.micromark.tokens, ["table"]);

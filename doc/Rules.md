@@ -2325,44 +2325,52 @@ in Markdown form, but require a separate link reference definition.
 
 <a name="md055"></a>
 
-## `MD055` - Table is missing leading or trailing pipe character
+## `MD055` - Table pipe style
 
 Tags: `table`
 
-Aliases: `table-missing-border`
+Aliases: `table-pipe-style`
 
-This rule is triggered when a [GFM table][gfm-table] is missing a leading
-or trailing pipe character `|`.
+This rule is triggered when a [GitHub Flavored Markdown table][gfm-table] is
+inconsistent about its use of leading and trailing pipe characters (`|`).
 
-This table is missing pipes on both sides:
+By default (`consistent` style), the header row of the first table in a document
+is used to determine the style that is enforced for all tables in that document.
+A specific style can be required by setting the `style` parameter accordingly.
+
+This table's header row has leading and trailing pipes, but its delimeter row is
+missing the trailing pipe and its first row of cells is missing the leading
+pipe:
 
 ```markdown
 | Heading | Heading |
-|---------|---------
+| ------- | -------
   Cell    | Cell    |
 ```
 
-To fix this, make sure there is a pipe character at the start and end of the
-row:
+To fix these issues, make sure there is a pipe character at the beginning and
+end of every row:
 
 ```markdown
 | Heading | Heading |
-|---------|---------|
+| ------- | ------- |
 | Cell    | Cell    |
 ```
 
-Note that text immediately below a table is treated as part of the table and
-will trigger this rule:
+Note that text immediately following a table (i.e., not separated by an empty
+line) is treated as part of the table (per the specification) and may also
+trigger this rule:
 
 ```markdown
 | Heading | Heading |
-|---------|---------|
+| ------- | ------- |
 | Cell    | Cell    |
-This text will trigger the rule
+This text is part of the table
 ```
 
 Rationale: Some parsers have difficulty with tables that are missing their
-leading or trailing pipe characters.
+leading or trailing pipe characters. The use of leading/trailing pipes can also
+help provide visual clarity.
 
 [gfm-table]: https://github.github.com/gfm/#tables-extension-
 

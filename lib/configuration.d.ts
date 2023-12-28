@@ -1049,13 +1049,13 @@ export interface Configuration {
         url_inline?: boolean;
       };
   /**
-   * MD055/table-missing-border : Table is missing leading or trailing pipe character : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
+   * MD055/table-pipe-style : Table pipe style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
    */
   MD055?: boolean;
   /**
-   * MD055/table-missing-border : Table is missing leading or trailing pipe character : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
+   * MD055/table-pipe-style : Table pipe style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md055.md
    */
-  "table-missing-border"?: boolean;
+  "table-pipe-style"?: boolean;
   /**
    * headings : MD001, MD003, MD018, MD019, MD020, MD021, MD022, MD023, MD024, MD025, MD026, MD036, MD041, MD043
    */
